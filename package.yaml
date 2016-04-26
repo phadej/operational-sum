@@ -1,0 +1,29 @@
+name: operational-sum
+version: 0.1.0.0
+synopsis: Operational for sum
+description: Operational for sum
+author: Oleg Grenrus <oleg.grenrus@iki.fi>
+maintainer: Oleg Grenrus <oleg.grenrus@iki.fi>
+license: BSD3
+github: phadej/operational-sum
+category: Control
+tested-with: GHC==7.8.4, GHC==7.10.3, GHC==8.0.1
+extra-source-files:
+- README.md
+
+ghc-options: -Wall
+
+dependencies:
+  - base                  >=4.7      && <4.10
+  - generics-sop          >=0.1      && <0.3
+  - operational           >=0.2.3.2  && <0.3
+
+library:
+  source-dirs: src
+
+tests:
+  oper-sum-example:
+    source-dirs: example
+    main: Example.hs
+    dependencies:
+      - operational-sum
